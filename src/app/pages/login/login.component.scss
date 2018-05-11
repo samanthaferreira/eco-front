@@ -1,0 +1,66 @@
+/* You can add global styles to this file, and also import other style files */
+
+	/*  SASS  */
+$link-color:#656565;
+$lg-letter-clr:#3f4652;
+
+.background-login{
+background-image: "./images/plant.jpg"
+}
+
+/* -- forms -- */
+
+.form-card {
+	color: $lg-letter-clr;
+  background: white; 
+  border-radius: 12px;
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+  overflow: hidden;
+	padding: 20px;
+
+}
+
+
+form.is-processing {
+	opacity: 0.5;
+}
+
+form .field {
+	margin-bottom: 20px;
+}
+
+form label {
+	display: block;
+	margin-bottom: 10px;
+	font-style: bold;
+}
+
+form input {
+  padding: 5px;
+  font-size: 16px;
+}
+
+form .submit {
+  padding-top: 20px;
+}
+
+form .submit button {
+  padding: 5px 20px;
+  text-align: center;
+  font-size: 16px;
+  background-color: cyan;
+  cursor: pointer;
+}
+
+form .field.has-error label {
+	color: red;
+}
+
+form .validation {
+	margin: 5px 0 10px;
+	color: red;
+}
+
+form .field.has-error input {
+	border: 1px solid  red;
+}
