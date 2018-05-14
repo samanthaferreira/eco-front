@@ -2,25 +2,31 @@
 
 /* ---- layout ---- */
 
-#site-header {
+#site-header  {
   padding: 30px 0;
-  color: white;
-  background: #111;
+  color:$link-gray;
   text-align: right;
 }
 
 #site-footer {
   color: white;
-  padding: 60px 0;
+  padding: 10px;
   background: #111;
 }
 
 #site-main {
+  margin-bottom: 60px;
 
 }
 .heart-logo{
   width:70px;
 }
+
+
+.container {
+  margin: 0 20px;
+}
+
 
 
 .section {
@@ -33,3 +39,5 @@
     margin: 0 auto;
   }
 }
+
+

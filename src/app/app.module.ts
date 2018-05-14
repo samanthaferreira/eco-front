@@ -34,7 +34,7 @@ const routes: Routes = [
     AppComponent,
     LoginComponent,
     SignupComponent,
-    HomePageComponent
+    HomePageComponent,
   ],
   imports: [
     BrowserModule,
