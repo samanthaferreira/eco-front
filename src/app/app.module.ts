@@ -21,6 +21,8 @@ import { SignupComponent } from './pages/signup/signup.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { StoresPageComponent } from './pages/stores-page/stores-page.component';
 import { StoreCreateComponent } from './pages/stores-create/stores-create.component';
+import { StoresFormComponent } from './components/stores-form/stores-form.component';
+import { StoresCardComponent } from './components/stores-card/stores-card.component';
 
 
 // -- routes
@@ -42,7 +44,9 @@ const routes: Routes = [
     SignupComponent,
     HomePageComponent,
     StoresPageComponent,
-    StoreCreateComponent
+    StoreCreateComponent,
+    StoresFormComponent,
+    StoresCardComponent
   ],
   imports: [
     BrowserModule,

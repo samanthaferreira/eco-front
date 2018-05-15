@@ -10,4 +10,14 @@
       <button [routerLink]="['/stores/create']"class="main-btn" name="button">Create</button>
   </div>
 
+  <!-- <app-stores-card></app-stores-card> -->
+ 
+
+  <div class="container">
+    <div *ngFor= "let store of stores">
+      <app-stores-card [stores] = "stores"></app-stores-card>
+    </div>
+  </div>
+
+
 

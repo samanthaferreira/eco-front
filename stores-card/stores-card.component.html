@@ -1,0 +1,11 @@
+<p>
+  stores-card works!
+</p>
+
+<div *ngIf="stores"  class= "card">
+  <h3>{{stores.name}}</h3>
+  <p> {{stores.type}}</p>
+  <img [src]="stores.picUrl"/>
+</div>
+
+<div *ngIf="!stores">uhuh</div>
