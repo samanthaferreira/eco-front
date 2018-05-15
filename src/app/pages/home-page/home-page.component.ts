@@ -10,6 +10,13 @@ export class HomePageComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    // (() => {
+    //   const prevArrow = document.getElementsByClassName('left')[0];
+    //   const nextArrow = document.getElementsByClassName('right')[0];
+    //   prevArrow.addEventListener('click', carousel.prevSlide);
+    //   nextArrow.addEventListener('click', carousel.nextSlide);
+    // })();
   }
+
 
 }

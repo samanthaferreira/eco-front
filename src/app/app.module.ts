@@ -3,9 +3,11 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 // -- services
 import { AppComponent } from './app.component';
 import { AuthService } from './services/auth.service';
+import { StoresService } from './services/stores.service';
 
 // -- guards
 
@@ -17,14 +19,18 @@ import { InitAuthGuardService } from './guards/init-auth-guard.service';
 import { LoginComponent } from './pages/login/login.component';
 import { SignupComponent } from './pages/signup/signup.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
+import { StoresPageComponent } from './pages/stores-page/stores-page.component';
+import { StoreCreateComponent } from './pages/stores-create/stores-create.component';
+
+
 // -- routes
 
 const routes: Routes = [
  { path: '',  component: HomePageComponent, canActivate: [ InitAuthGuardService ] },
  { path: 'login', component: LoginComponent, canActivate: [ RequireAnonGuardService ] },
- { path: 'signup',  component: SignupComponent, canActivate: [ RequireAnonGuardService ] }
- // { path: 'page',  component: ... , canActivate: [ RequireUserGuardService ] },
-
+ { path: 'signup',  component: SignupComponent, canActivate: [ RequireAnonGuardService ] },
+ { path: 'stores',  component: StoresPageComponent, canActivate: [ RequireUserGuardService ] },
+ { path: 'stores/create',  component: StoreCreateComponent, canActivate: [ RequireUserGuardService ] }
 ];
 
 // don't forget to register the guards (and the AuthService) in the providers
@@ -35,14 +41,18 @@ const routes: Routes = [
     LoginComponent,
     SignupComponent,
     HomePageComponent,
+    StoresPageComponent,
+    StoreCreateComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     RouterModule.forRoot(routes),
+    NgbModule.forRoot(),
     HttpClientModule
   ],
   providers: [
+    StoresService,
     AuthService,
     InitAuthGuardService,
     RequireAnonGuardService,
