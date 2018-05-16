@@ -1,0 +1,12 @@
+
+<div class="container">
+  <h1>Profile</h1>
+  <div>
+    Name: {{user.username}}
+  </div>
+  <h2>Favorite Stores</h2>
+  <ul *ngFor="let store of user.favorites">
+    <li><app-stores-card [store] = "store"></app-stores-card></li>
+  </ul>
+</div>
+  

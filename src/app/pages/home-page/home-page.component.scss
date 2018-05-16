@@ -9,7 +9,10 @@ html, body {
 img {
   max-width: 100%;
 }
-
+.site-title{
+  font-family: 'Kavivanar';
+  letter-spacing: 2px;
+}
 .slider-container{
   text-align: center;
 }
@@ -47,13 +50,37 @@ h2{
     -webkit-appearance: none;
     -moz-appearance: none;
     border-radius: 2px;
+    margin-bottom: 70px;
 
 }
+ .main-slide{
+  background-image: url("assets/imgs/view.jpg"); 
+  background-position: center;
+}
+.middle-slide{
+  background-image: url("assets/imgs/fruits.jpg"); 
+}
 
+.home-title{
+  padding-top: 50px;
+  padding-bottom: 40px;
+}
+.middle-title{
+  margin: 0;     
+  color: white;
+  padding-top: 90px;
+  font-size: 45px;
+  font-family:"Montserrat";
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight:normal;   
+
+}
 .item{
- background-image: url("assets/imgs/fruits.jpg"); 
+   
   text-align: center;
-  height: 300px !important;
+  height: 600px !important;
+  background-size: cover;
 }
 
 .carousel{
@@ -73,5 +100,3 @@ filter: alpha(opacity=0); /* ie fix */
   opacity:1;
   filter: alpha(opacity=100); /* ie fix */
 }
-
-

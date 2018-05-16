@@ -23,6 +23,7 @@ import { StoresPageComponent } from './pages/stores-page/stores-page.component';
 import { StoreCreateComponent } from './pages/stores-create/stores-create.component';
 import { StoresFormComponent } from './components/stores-form/stores-form.component';
 import { StoresCardComponent } from './components/stores-card/stores-card.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 
 
 // -- routes
@@ -32,6 +33,7 @@ const routes: Routes = [
  { path: 'login', component: LoginComponent, canActivate: [ RequireAnonGuardService ] },
  { path: 'signup',  component: SignupComponent, canActivate: [ RequireAnonGuardService ] },
  { path: 'stores',  component: StoresPageComponent, canActivate: [ RequireUserGuardService ] },
+ { path: 'profile',  component: ProfileComponent, canActivate: [ RequireUserGuardService ] },
  { path: 'stores/create',  component: StoreCreateComponent, canActivate: [ RequireUserGuardService ] }
 ];
 
@@ -46,7 +48,8 @@ const routes: Routes = [
     StoresPageComponent,
     StoreCreateComponent,
     StoresFormComponent,
-    StoresCardComponent
+    StoresCardComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

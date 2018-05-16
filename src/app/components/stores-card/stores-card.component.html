@@ -1,0 +1,40 @@
+<div *ngIf="!store">
+  ... loading
+</div>
+
+<!-- <div *ngIf="store"  class= "card">
+  <h3>{{store.name}}</h3>
+  <p> {{store.type}}</p>
+  <img [src]="store.picUrl"/>
+  <a (click)="addToFavorites()">add to favorites</a>
+</div> -->
+
+<!-- 
+<div *ngIf="store" class="card mb-3">
+    <img class="card-img-top" [src]="store.picUrl" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{store.name}}</h5>
+      <p class="card-text">{{store.type}}</p>
+      <a (click)="addToFavorites()">add to favorites</a>
+    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> 
+    </div>
+  </div>-->
+  
+  
+ 
+  <!-- <div *ngIf="store" class="card mb-3">
+      <img class="card-img-top" [src]="store.picUrl" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{store.name}}</h5>
+        <p class="card-text">{{store.type}}</p>
+        <p class="card-text"><small class="text-muted"></small></p>
+      </div>
+    </div> -->
+
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" [src]="store.picUrl" alt="Card image cap">
+        <div class="card-body">
+
+          <p class="card-text">{{store.name}}</p>
+        </div>
+      </div>

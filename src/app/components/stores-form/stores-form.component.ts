@@ -12,7 +12,7 @@ export class StoresFormComponent implements OnInit {
   feedbackEnabled = false;
   error = null;
   processing = false;
-  stores: object = {};
+  stores: any = {};
 
   constructor(private storesService: StoresService, private router: Router) { }
 

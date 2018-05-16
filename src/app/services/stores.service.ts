@@ -1,11 +1,13 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpResponse } from '@angular/common/http';
 import 'rxjs/add/operator/toPromise';
+import { environment } from '../../environments/environment';
+
 
 @Injectable()
 export class StoresService {
 
-  private baseUrl = 'http://localhost:3000';
+  private apiUrl = environment.apiUrl + '/stores';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -13,14 +15,14 @@ export class StoresService {
     const options = {
       withCredentials: true
     };
-    return this.httpClient.get(`${this.baseUrl}/stores`, options)
+    return this.httpClient.get(`${this.apiUrl}`, options)
       .toPromise();
   }
   getOne(id) {
     const options = {
       withCredentials: true
     };
-    return this.httpClient.get(`${this.baseUrl}/stores/${id}`, options)
+    return this.httpClient.get(`${this.apiUrl}/${id}`, options)
       .toPromise();
   }
 
@@ -28,7 +30,7 @@ export class StoresService {
     const options = {
       withCredentials: true
     };
-    return this.httpClient.post(`${this.baseUrl}/stores`, stores, options)
+    return this.httpClient.post(`${this.apiUrl}`, stores, options)
       .toPromise();
   }
 

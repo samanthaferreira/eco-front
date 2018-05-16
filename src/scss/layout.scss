@@ -2,11 +2,11 @@
 
 /* ---- layout ---- */
 
-#site-header  {
-  padding: 30px 0;
-  color:$link-gray;
-  text-align: right;
-}
+// #site-header  {
+//   padding: 30px 0;
+//   color:$link-gray;
+//   text-align: right;
+// }
 
 #site-footer {
   color: white;
@@ -23,9 +23,9 @@
 }
 
 
-.container {
-  margin: 0 20px;
-}
+// .container {
+//   margin: 0 20px;
+// }
 
 
 
@@ -33,11 +33,11 @@
   padding-top: 20px;
 }
 
-@media (min-width: 768px) {
-  .container {
-    max-width: 728px;
-    margin: 0 auto;
-  }
-}
+// @media (min-width: 768px) {
+//   .container {
+//     max-width: 728px;
+//     margin: 0 auto;
+//   }
+// }
 
 

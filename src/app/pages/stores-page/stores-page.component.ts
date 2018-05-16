@@ -10,8 +10,8 @@ import { AuthService } from '../../services/auth.service';
 })
 
 export class StoresPageComponent implements OnInit {
-  loggedUser: object;
-  stores: object;
+  loggedUser: any;
+  stores: any;
 
   constructor(
     private router: Router,
