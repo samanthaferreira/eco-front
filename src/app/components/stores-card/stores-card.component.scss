@@ -1,0 +1,115 @@
+.container{background:#eee;}
+.articles{
+  display:flex;
+  overflow:hidden;
+  flex-wrap:wrap;
+  align-items:stretch;
+}
+.articleShort{
+  display:flex;
+  //flex: 0 1 50%; //controll the width, default 1 1 0%
+  flex:1 1 0%; //really buggy in safari IOS
+  
+}
+.articleMain{
+  display:flex;
+  flex: 1 1 100%; //controll the width, default 1 1 0%
+}
+.card{
+ display:flex;
+  align-items: center;
+  overflow:hidden;
+  background-color:white;
+  //padding:15px;
+  margin: 15px;
+  
+    .card-content{
+      display:flex;
+      flex-direction:column;
+      align-items:flex-start;
+       flex: 1 1 auto;
+      
+      h3,p{
+        max-width: calc(100% - 30px);
+        padding-left:30px;
+      }
+  }
+  .card-image{
+    min-width:262px;
+    a{
+    img{
+      //min-width:162px;
+  display: block;
+ max-width: 100%;
+ height: auto;
+
+    }
+  }
+  }
+
+}
+
+
+@media screen and (max-width: 992px) {
+.articleShort{
+  flex:1 1 100%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .card{flex-direction:column;
+  .card-content{
+    h3,p{text-align:center;
+    }
+    }
+    .card-image{
+
+      img{
+
+      }
+    }
+  }
+}
+  
+
+ label {
+  /* Presentation */
+  font-size: 30px
+}
+
+/* Required Styling */
+
+label input[type="checkbox"] {
+  display: none;
+}
+
+.custom-checkbox {
+  margin-left: 2em;
+  position: relative;
+  cursor: pointer;
+}
+
+.custom-checkbox .glyphicon {
+  color: gold;
+  position: absolute;
+  size:30px;
+  top: 0.4em;
+  left: -1.25em;
+  font-size: 0.75em;
+}
+
+.custom-checkbox .glyphicon-star-empty {
+  color: gray;
+}
+
+.custom-checkbox .glyphicon-star {
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.custom-checkbox:hover .glyphicon-star{
+  opacity: 0.5;
+}
+
+.custom-checkbox input[type="checkbox"]:checked ~ .glyphicon-star {
+  opacity: 1;
+}

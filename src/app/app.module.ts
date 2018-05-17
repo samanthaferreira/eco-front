@@ -24,7 +24,8 @@ import { StoreCreateComponent } from './pages/stores-create/stores-create.compon
 import { StoresFormComponent } from './components/stores-form/stores-form.component';
 import { StoresCardComponent } from './components/stores-card/stores-card.component';
 import { ProfileComponent } from './pages/profile/profile.component';
-
+import { StoreDetailComponent } from './pages/store-detail/store-detail.component';
+import { StoreInfoComponent } from './components/store-info/store-info.component';
 
 // -- routes
 
@@ -34,7 +35,8 @@ const routes: Routes = [
  { path: 'signup',  component: SignupComponent, canActivate: [ RequireAnonGuardService ] },
  { path: 'stores',  component: StoresPageComponent, canActivate: [ RequireUserGuardService ] },
  { path: 'profile',  component: ProfileComponent, canActivate: [ RequireUserGuardService ] },
- { path: 'stores/create',  component: StoreCreateComponent, canActivate: [ RequireUserGuardService ] }
+ { path: 'stores/create',  component: StoreCreateComponent, canActivate: [ RequireUserGuardService ] },
+ { path: 'store/detail/:id',  component: StoreDetailComponent, canActivate: [ RequireUserGuardService ] }
 ];
 
 // don't forget to register the guards (and the AuthService) in the providers
@@ -49,7 +51,9 @@ const routes: Routes = [
     StoreCreateComponent,
     StoresFormComponent,
     StoresCardComponent,
-    ProfileComponent
+    ProfileComponent,
+    StoreDetailComponent,
+    StoreInfoComponent
   ],
   imports: [
     BrowserModule,

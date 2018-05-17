@@ -1,0 +1,25 @@
+
+.picroll{
+
+  display:flex;
+}
+
+.picroll-content {
+  width: 25vw;
+}
+  img {
+    width: 100%;
+ }
+
+ .list-title{
+   text-align: center;
+   color:#8BB74E;
+   font-family: 'Kavivanar';
+ }
+.create-btn{
+  position:center;
+  text-decoration:none;
+  background-color:#8BB74E;
+  color:white;
+  border-radius:4px;
+}

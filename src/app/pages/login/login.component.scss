@@ -2,19 +2,27 @@
 
 	/*  SASS  */
 $link-color:#656565;
-$lg-letter-clr:#3f4652;
+$lg-letter-clr:#656565;
 
 
 .background-login  {
-  background-image: url("/assets/imgs/plant.jpg");
-  background-size: cover;
  z-index:2;
   max-width: 100%;
   margin:0 auto;
   min-height: 100vh;
+  background: url(https://media3.giphy.com/media/T1E5u35uWZDnq/giphy.gif)
+    no-repeat center center fixed;
+  background-size: cover;
+  background-position: center;
+
 }
 
 /* -- forms -- */
+
+.card{
+  margin-top:10%;
+  margin-bottom:10%;
+}
 
 .form-card {
 	color: $lg-letter-clr;
@@ -22,18 +30,11 @@ $lg-letter-clr:#3f4652;
   border-radius: 12px;
   box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   overflow: hidden;
-  padding: 20px;
+  padding: 5px;
   max-width: 400px;
-
-}
-
-
-form.is-processing {
-	opacity: 0.5;
-}
-
-form .field {
-	margin-bottom: 20px;
+  opacity: 0.95;
+position:center;
+  box-shadow: 0px 0px 3px #3b4652;
 }
 
 form label {
@@ -53,7 +54,7 @@ form .submit button {
   padding: 5px 20px;
   text-align: center;
   font-size: 16px;
-  background-color: cyan;
+  background-color: #656565;
   cursor: pointer;
 }
 
@@ -69,3 +70,89 @@ form .validation {
 form .field.has-error input {
 	border: 1px solid  red;
 }
+
+
+//code pen
+// @import url("https://fonts.googleapis.com/css?family=Roboto");
+
+
+
+// .modal-content {
+//   background-color: #3b4652;
+//   opacity: 0.95;
+//   padding: 0 18px;
+//   box-shadow: 0px 0px 3px #3b4652;
+// }
+
+// .user-img {
+//   margin-top: -50px;
+//   margin-bottom: 35px;
+// }
+
+// .user-img img {
+//   width: 100px;
+//   height: 100px;
+//   border-radius: 5px;
+//   box-shadow: 0px 0px 2px #3b4652;
+//   margin-bottom: 40px;
+// }
+
+// .form-group {
+//   margin-bottom: 25px;
+// }
+
+// .form-group input {
+//   height: 42px;
+//   border-radius: 5px;
+//   border: 0;
+//   font-size: 18px;
+//   padding-left: 54px;
+// }
+
+// .form-group::before {
+//   font-family: "Font Awesome\ 5 Free";
+//   content: "\f007";
+//   /* positoning of the icon*/
+ 
+//   font-size: 22px;
+//   color: #555e60;
+//   left: 28px;
+//   padding-top: 4px;
+// }
+
+// .form-group:last-of-type::before {
+//   content: "\f023";
+// }
+
+// button {
+//   width: 40%;
+//   margin: 10px 0 25px;
+// }
+
+// .btn {
+//   background-color: #eacdaf;
+//   opacity: 2;
+//   font-size: 19px;
+//   padding: 7px 14px;
+//   border-radius: 5px;
+//   border-bottom: 4px solid #d6ba9e;
+// }
+
+// .btn:hover,
+// .btn:focus {
+//   background-color: #ccb299 !important;
+//   border-bottom: 4px solid #c1a88f !important;
+// }
+
+// .svg-line-fa {
+//   font-size: 20px;
+//   margin-right: 7px;
+// }
+
+// .forgot {
+//   padding: 5px 0 25px;
+// }
+
+// .forgot a {
+//   color: #fcdcbd;
+// }

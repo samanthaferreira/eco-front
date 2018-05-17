@@ -16,7 +16,7 @@ export class StoresCardComponent implements OnInit {
   }
 
   addToFavorites () {
-    this.authService.addFavorite(this.store.id);
+    this.authService.addFavorite(this.store._id);
     console.log('added to favorites');
     // .then optional show message "it has been added"
   }

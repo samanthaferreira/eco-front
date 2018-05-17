@@ -1,0 +1,40 @@
+
+  <div *ngIf="store" class="container row articles">
+      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+      <article class="">
+       
+          <h3 class="store-name"> {{store.name}}</h3>
+              <div>
+                  <div class="picroll">
+                    <div class="picroll-content first-img">
+                      <img  [src]="store.picUrl" alt="alt here">
+                    </div>
+
+                    <div class="picroll-content">
+                      <img  [src]="store.picUrl" alt="alt here">
+                    </div>
+                  
+                </div>
+                </div>
+<div class="extra-info">
+            
+
+            
+            <p> About this store: {{store.about}}</p>
+            <p><i class="fal fa-route">Address: {{store.address}}</i></p>
+            <p><i class="fas fa-phone">{{store.phone}}</i></p>
+          </div>
+            <!-- <a  class="fav-btn " (click)="addToFavorites()"></a> -->
+            
+            <div class="interactive">
+            <label (click)="addToFavorites()" for="id-of-input" class="custom-checkbox">
+              <input type="checkbox" id="id-of-input"/>  
+              <i class="glyphicon glyphicon-star-empty"></i>
+              <i class="glyphicon glyphicon-star"></i>
+            </label>
+      <a [href]="store.takeMe"><i class="fas fa-map-marker-alt"></i> Take  me there!</a>
+          </div>
+         
+        
+      </article>      
+    </div>

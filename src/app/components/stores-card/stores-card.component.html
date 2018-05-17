@@ -1,40 +1,32 @@
+<!-- <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet"> -->
+<div *ngIf="store" class="container row articles">
+
+  <article class="articleShort articleMain">
+    <div class="card">
+      <div class="card-image">
+        <a href="#" title="title here">
+          <img [src]="store.picUrl" alt="alt here"> 
+        </a>
+      </div>
+      <div class="card-content">
+        <h3> <a [routerLink]="['/store/detail', store._id]">{{store.name}}</a></h3>
+        
+        <p>{{store.about}}</p>
+        
+        <!-- <a  class="fav-btn " (click)="addToFavorites()"></a> -->
+        
+        <label (click)="addToFavorites()" for="id-of-input" class="custom-checkbox">
+          <input type="checkbox" id="id-of-input"/>  
+          <i class="glyphicon glyphicon-star-empty"></i>
+          <i class="glyphicon glyphicon-star"></i>
+        </label>
+
+      </div>
+    </div>
+  </article>      
+</div>
+    
 <div *ngIf="!store">
   ... loading
 </div>
-
-<!-- <div *ngIf="store"  class= "card">
-  <h3>{{store.name}}</h3>
-  <p> {{store.type}}</p>
-  <img [src]="store.picUrl"/>
-  <a (click)="addToFavorites()">add to favorites</a>
-</div> -->
-
-<!-- 
-<div *ngIf="store" class="card mb-3">
-    <img class="card-img-top" [src]="store.picUrl" alt="Card image cap">
-    <div class="card-body">
-      <h5 class="card-title">{{store.name}}</h5>
-      <p class="card-text">{{store.type}}</p>
-      <a (click)="addToFavorites()">add to favorites</a>
-    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p> 
-    </div>
-  </div>-->
-  
-  
- 
-  <!-- <div *ngIf="store" class="card mb-3">
-      <img class="card-img-top" [src]="store.picUrl" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">{{store.name}}</h5>
-        <p class="card-text">{{store.type}}</p>
-        <p class="card-text"><small class="text-muted"></small></p>
-      </div>
-    </div> -->
-
-    <div class="card" style="width: 18rem;">
-        <img class="card-img-top" [src]="store.picUrl" alt="Card image cap">
-        <div class="card-body">
-
-          <p class="card-text">{{store.name}}</p>
-        </div>
-      </div>
+         

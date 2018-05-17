@@ -12,7 +12,7 @@ export class StoresFormComponent implements OnInit {
   feedbackEnabled = false;
   error = null;
   processing = false;
-  stores: any = {};
+  store: any = {};
 
   constructor(private storesService: StoresService, private router: Router) { }
 
@@ -23,7 +23,7 @@ export class StoresFormComponent implements OnInit {
       this.feedbackEnabled = true;
       if (form.valid) {
         this.processing = true;
-        this.storesService.create(this.stores)
+        this.storesService.create(this.store)
           .then((result) => {
             this.router.navigate(['/']);
           })

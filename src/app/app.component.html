@@ -10,8 +10,8 @@
 <nav id="site-header">
  <img class="heart-logo " align="left" src="/assets/imgs/earth-heart.png">
   <div class="container">
-    <h1 class="site-title" align="left" ><a [routerLink]="['/']"></a>EcoLife</h1> 
-    
+    <h1 class="site-title" align="left" ><a [routerLink]="['/']">EcoLife</a></h1> 
+    <a class ="side-link" [routerLink]="['/stores']">Grocerie Stores</a>
     
     <div [ngClass]="{'is-user': user, 'is-anon': anon}">
       <div *ngIf="loading">
@@ -27,6 +27,7 @@
       </div>
     </div>
   </div>
+  <hr>
   </nav>
   
 
@@ -37,6 +38,6 @@
     </div>
 
 <footer id="site-footer">
-  <div class="container">
-    nice footer
+  <div class="container site-title">
+     <p> &copy 2018 EcoLife</p>
   </div>

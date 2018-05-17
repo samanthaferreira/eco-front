@@ -1,0 +1,86 @@
+@media screen and (max-width: 992px) {
+  .articleShort{
+    flex:1 1 100%;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .card{flex-direction:column;
+    .card-content{
+      h3,p{text-align:center;
+      }
+      }
+      .card-image{
+  
+        img{
+  
+        }
+      }
+    }
+  }
+  .first-img{
+    border:5%;
+    border-color:#E4EDDC;
+   margin-right:15px;
+  }
+  .picroll{
+margin:2px;
+    display:flex;
+  }
+  
+  .picroll-content {
+    width: 25vw;
+  }
+    img {
+      width: 100%;
+   }
+   .extra-info{
+     text-align:left;
+     font-family: "Montserrat"
+   }
+  .store-name{
+    color:#428bca;
+    font-family:"Montserrat";
+    text-align:center;
+  }
+   label {
+    /* Presentation */
+    font-size: 30px
+  }
+  
+  /* Required Styling */
+  
+  label input[type="checkbox"] {
+    display: none;
+  }
+  
+  .custom-checkbox {
+    margin-left: 2em;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .custom-checkbox .glyphicon {
+    color: gold;
+    position: absolute;
+    size:30px;
+    top: 0.4em;
+    left: -1.25em;
+    font-size: 0.75em;
+  }
+  
+  .custom-checkbox .glyphicon-star-empty {
+    color: gray;
+  }
+  
+  .custom-checkbox .glyphicon-star {
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+  }
+  
+  .custom-checkbox:hover .glyphicon-star{
+    opacity: 0.5;
+  }
+  
+  .custom-checkbox input[type="checkbox"]:checked ~ .glyphicon-star {
+    opacity: 1;
+  }

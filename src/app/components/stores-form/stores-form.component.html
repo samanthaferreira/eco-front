@@ -2,52 +2,85 @@
 <form (submit)="submitForm(form)" #form="ngForm" novalidate [ngClass]="{'is-processing': processing}">
 
 
-    <div class="field" [ngClass]="{'has-error': feedbackEnabled && typeField.errors}">
-      <label>type</label>
-      <input name="type" [(ngModel)]="stores.type" #typeField="ngModel" required minlength="6" [disabled]="processing"/>
-      <div *ngIf="feedbackEnabled && typeField.errors">
-        <p *ngIf="typeField.errors.required" class="validation">type required</p>
-      </div>
+  <div class="field" [ngClass]="{'has-error': feedbackEnabled && typeField.errors}">
+    <label>type</label>
+    <input name="type" [(ngModel)]="store.type" #typeField="ngModel" required minlength="6" [disabled]="processing"/>
+    <div *ngIf="feedbackEnabled && typeField.errors">
+      <p *ngIf="typeField.errors.required" class="validation">type required</p>
     </div>
- 
-    <div class="field" [ngClass]="{'has-error': feedbackEnabled && nameField.errors}">
-      <label>Name</label>
-      <input type="text" name="name" [(ngModel)]="stores.name" #nameField="ngModel" required minlength="6" [disabled]="processing"/>
-      <div *ngIf="feedbackEnabled && nameField.errors">
-        <p *ngIf="nameField.errors.required" class="validation">name required</p>
-     
-      </div>
+  </div>
+
+  <div class="field" [ngClass]="{'has-error': feedbackEnabled && nameField.errors}">
+    <label>Name</label>
+    <input type="text" name="name" [(ngModel)]="store.name" #nameField="ngModel" required minlength="6" [disabled]="processing"/>
+    <div *ngIf="feedbackEnabled && nameField.errors">
+      <p *ngIf="nameField.errors.required" class="validation">name required</p>
+    
     </div>
-    <div class="field" [ngClass]="{'has-error': feedbackEnabled && aboutField.errors}">
-        <label>about</label>
-        <input type="text" name="about" [(ngModel)]="stores.about" #aboutField="ngModel" required minlength="200" [disabled]="processing"/>
-        <div *ngIf="feedbackEnabled && aboutField.errors">
-          <p *ngIf="aboutField.errors.required" class="validation">about required</p>
-        </div>
-      </div>
-
-      <div class="field" [ngClass]="{'has-error': feedbackEnabled && picUrlField.errors}">
-          <label>image</label>
-          <input type="text" name="picUrl" [(ngModel)]="stores.picUrl" #picUrlField="ngModel" required minlength="6" [disabled]="processing"/>
-          <div *ngIf="feedbackEnabled && picUrlField.errors">
-            <p *ngIf="picUrlField.errors.required" class="validation">image required</p>
-          </div>
-        </div>
-
-        <div class="field" [ngClass]="{'has-error': feedbackEnabled && pic2UrlField.errors}">
-            <label>image</label>
-            <input type="text" name="pic2Url" [(ngModel)]="stores.pic2Url" #pic2UrlField="ngModel" required minlength="6" [disabled]="processing"/>
-            <div *ngIf="feedbackEnabled && pic2UrlField.errors">
-              <p *ngIf="pic2UrlField.errors.required" class="validation">image required</p>
-            </div>
-          </div>
-  
-    <div class="field submit">
-      <button type="submit" [disabled]="processing">Add</button>
-      <div *ngIf="feedbackEnabled && form.invalid">
-        <p class="validation">there are errors in the form, please review the fields</p>
-      </div>
+  </div>
+  <div class="field" [ngClass]="{'has-error': feedbackEnabled && aboutField.errors}">
+    <label>about</label>
+    <input type="text" name="about" [(ngModel)]="store.about" #aboutField="ngModel" required minlength="200" [disabled]="processing"/>
+    <div *ngIf="feedbackEnabled && aboutField.errors">
+      <p *ngIf="aboutField.errors.required" class="validation">about required</p>
     </div>
-  </form>
+  </div>
 
-  --{{ stores | json}}--
+  <div class="field" [ngClass]="{'has-error': feedbackEnabled && picUrlField.errors}">
+    <label>image</label>
+    <input type="text" name="picUrl" [(ngModel)]="store.picUrl" #picUrlField="ngModel" required minlength="6" [disabled]="processing"/>
+    <div *ngIf="feedbackEnabled && picUrlField.errors">
+      <p *ngIf="picUrlField.errors.required" class="validation">image required</p>
+    </div>
+  </div>
+
+  <div class="field" [ngClass]="{'has-error': feedbackEnabled && pic2UrlField.errors}">
+      <label>image</label>
+    <input type="text" name="pic2Url" [(ngModel)]="store.pic2Url" #pic2UrlField="ngModel" required minlength="6" [disabled]="processing"/>
+    <div *ngIf="feedbackEnabled && pic2UrlField.errors">
+      <p *ngIf="pic2UrlField.errors.required" class="validation">image required</p>
+    </div>
+  </div>
+
+  <div class="field" [ngClass]="{'has-error': feedbackEnabled && pic3UrlField.errors}">
+    <label>image</label>
+    <input type="text" name="pic3Url" [(ngModel)]="store.pic3Url" #pic3UrlField="ngModel" required minlength="6" [disabled]="processing"/>
+    <div *ngIf="feedbackEnabled && pic3UrlField.errors">
+      <p *ngIf="pic3UrlField.errors.required" class="validation">image required</p>
+    </div>
+  </div>
+
+  <div class="field" [ngClass]="{'has-error': feedbackEnabled && addressField.errors}">
+    <label>address</label>
+    <input type="text" name="address" [(ngModel)]="store.address" #addressField="ngModel" required minlength="6" [disabled]="processing"/>
+    <div *ngIf="feedbackEnabled && addressField.errors">
+      <p *ngIf="addressField.errors.required" class="validation">address required</p>
+    </div>
+  </div>
+
+  <div class="field" [ngClass]="{'has-error': feedbackEnabled && phoneField.errors}">
+    <label>phone</label>
+    <input type="text" name="phone" [(ngModel)]="store.phone" #phoneField="ngModel" required minlength="6" [disabled]="processing"/>
+    <div *ngIf="feedbackEnabled && phoneField.errors">
+      <p *ngIf="phoneField.errors.required" class="validation">phone required</p>
+    </div>
+  </div>
+
+  <div class="field" [ngClass]="{'has-error': feedbackEnabled && takeMeField.errors}">
+    <label>TakeMe</label>
+    <input type="text" name="TakeMe" [(ngModel)]="store.takeMe" #takeMeField="ngModel" required minlength="6" [disabled]="processing"/>
+    <div *ngIf="feedbackEnabled && takeMeField.errors">
+      <p *ngIf="takeMeField.errors.required" class="validation">TakeMe required</p>
+    </div>
+  </div>
+
+  <div class="field submit">
+    <button type="submit" [disabled]="processing">Add</button>
+    <div *ngIf="feedbackEnabled && form.invalid">
+      <p class="validation">there are errors in the form, please review the fields</p>
+    </div>
+  </div>
+
+</form>
+
+  --{{ store | json}}--

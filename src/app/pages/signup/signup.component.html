@@ -1,4 +1,4 @@
-<body class = "background-signup">  </body>
+<div class = "background-login">  
   <form class = "section form-card" (ngSubmit)="submitForm(form)" #form="ngForm" novalidate [ngClass]="{'is-processing': processing}">
   
     <div class="field" [ngClass]="{'has-error': feedbackEnabled && usernameField.errors}">
@@ -26,3 +26,4 @@
       </div>
     </div>
   </form>
+</div>

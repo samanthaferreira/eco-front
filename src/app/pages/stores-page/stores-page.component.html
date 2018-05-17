@@ -1,15 +1,35 @@
 
-<h1>Select your city:</h1>
-<select>
+
+
+
+<!-- <h1>Select your city:</h1>
+  <select>
     <option value="barcelona">Barcelona</option>
     <option value="paris">Paris</option>
     <option value="rome">Rome</option>
-  </select> 
+  </select>  -->
   
   <div *ngIf="loggedUser.admin === true">
-      <button [routerLink]="['/stores/create']"class="main-btn" name="button">Create</button>
+    <button [routerLink]="['/stores/create']"class="create-btn" name="button">Create</button>
   </div>
+  
+  <div>
+      <div class="picroll">
+        <div class="picroll-content">
+        <img class="fruit-sqr" src= "assets/imgs/fruit-square.jpg">
+        </div>
+        <div class="picroll-content">
+        <img class="fruit-sqr" src= "assets/imgs/square2.jpg">
+        </div>
+        <div class="picroll-content">
+        <img class="fruit-sqr" src= "assets/imgs/square3.jpg">
+        </div>
+        <div class="picroll-content">
+        <img class="fruit-sqr" src= "assets/imgs/square4.jpg">
+      </div>
+    </div>
 
+    <h1 class="list-title">Grocerie Stores in Barcelona</h1>
   <!-- <app-stores-card></app-stores-card> -->
  
 

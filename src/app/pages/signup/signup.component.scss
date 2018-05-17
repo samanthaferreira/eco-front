@@ -4,10 +4,20 @@
   $link-color:#656565;
   $lg-letter-clr:#3f4652;
   
-  .background-login{
-  background-image: "./images/plant.jpg"
-  }
-  
+ 
+
+.background-login  {
+  z-index:2;
+   max-width: 100%;
+   margin:0 auto;
+   min-height: 100vh;
+   background: url(https://media3.giphy.com/media/T1E5u35uWZDnq/giphy.gif)
+     no-repeat center center fixed;
+   background-size: cover;
+   background-position: center;
+ 
+ }
+ 
   /* -- forms -- */
   
   .form-card {

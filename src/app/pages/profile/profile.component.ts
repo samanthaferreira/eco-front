@@ -10,7 +10,7 @@ export class ProfileComponent implements OnInit {
 
   user: any;
 
-  constructor(private authService: AuthService) { 
+  constructor(private authService: AuthService) {
     this.user = authService.getUser();
    }
 

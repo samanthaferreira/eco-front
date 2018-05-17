@@ -26,11 +26,11 @@ export class StoresService {
       .toPromise();
   }
 
-  create(stores) {
+  create(store) {
     const options = {
       withCredentials: true
     };
-    return this.httpClient.post(`${this.apiUrl}`, stores, options)
+    return this.httpClient.post(`${this.apiUrl}`, store, options)
       .toPromise();
   }
 
