@@ -5,8 +5,6 @@ import { Subject } from 'rxjs/Subject';
 import { environment } from '../../environments/environment';
 import 'rxjs/add/operator/toPromise';
 
-// import { environment } from '../../environments/environment';
-
 @Injectable()
 export class AuthService {
 
